@@ -1,0 +1,5 @@
+student_id,predicted_gpa,insights,status
+2020ITIBB0111,1.89,❌ At risk - immediate intervention needed | Urgent: Contact academic support services | Predicted Final GPA: 1.89/4.0,success
+2020ITIBB0338,3.89,🎓 Excellent academic performance expected | Consider honors programs or research opportunities | Predicted Final GPA: 3.89/4.0,success
+2020ITIBB0360,3.48,📚 Good academic performance expected | Maintain current study habits | Predicted Final GPA: 3.48/4.0,success
+2019ITIBB0372,1.91,❌ At risk - immediate intervention needed | Urgent: Contact academic support services | Predicted Final GPA: 1.91/4.0,success

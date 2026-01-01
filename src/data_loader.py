@@ -301,4 +301,17 @@ if __name__ == "__main__":
         
     except Exception as e:
         print(f"Error in data loading: {str(e)}")
-        
+'''       
+# Data head
+print("\n--- 3.1 Data Head (First 5 Rows) ---")
+print(df.head())
+
+# DataFrame info
+print("\n--- 3.2 DataFrame Information (Data Types and Missing Values) ---")
+df.info()
+
+# Statistics
+print("\n--- 3.3 Descriptive Statistics (Mean, Std, Min, Max, Quartiles) ---")
+print(df.describe().T)
+
+'''

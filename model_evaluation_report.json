@@ -1,0 +1,141 @@
+{
+  "model_info": {
+    "model_type": "RandomForestRegressor",
+    "features_count": 5,
+    "features": [
+      "Gender_F",
+      "Year1_GPA",
+      "Year2_GPA",
+      "Year3_GPA",
+      "Credit_Hours_Avg"
+    ]
+  },
+  "data_info": {
+    "test_samples": 26,
+    "has_target": true
+  },
+  "regression_metrics": {
+    "MAE": 0.029046730769231015,
+    "MSE": 0.002018402527884634,
+    "RMSE": 0.04492663494948886,
+    "MAPE": 0.9328060419563154,
+    "R\u00b2": 0.9845597775146769,
+    "Adjusted_R\u00b2": 0.9806997218933462,
+    "Explained_Variance": 0.9876765963183436,
+    "Max_Error": 0.17650000000000032,
+    "Mean_Absolute_Deviation": 0.2889349112426035,
+    "Median_Absolute_Error": 0.023749999999999494,
+    "Within_0.1_GPA": 96.15384615384616,
+    "Within_0.25_GPA": 100.0,
+    "Within_0.5_GPA": 100.0,
+    "Direction_Accuracy": 96.0
+  },
+  "classification_metrics": {
+    "threshold_2.0": {
+      "Threshold_GPA": 2.0,
+      "Accuracy": 100.0,
+      "Precision": 100.0,
+      "Recall": 100.0,
+      "F1_Score": 100.0,
+      "Specificity": 0,
+      "Balanced_Accuracy": 50.0,
+      "Confusion_Matrix": {
+        "TP": 26,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      }
+    },
+    "threshold_2.5": {
+      "Threshold_GPA": 2.5,
+      "Accuracy": 100.0,
+      "Precision": 100.0,
+      "Recall": 100.0,
+      "F1_Score": 100.0,
+      "Specificity": 100.0,
+      "Balanced_Accuracy": 100.0,
+      "Confusion_Matrix": {
+        "TP": 25,
+        "TN": 1,
+        "FP": 0,
+        "FN": 0
+      }
+    },
+    "threshold_3.0": {
+      "Threshold_GPA": 3.0,
+      "Accuracy": 100.0,
+      "Precision": 100.0,
+      "Recall": 100.0,
+      "F1_Score": 100.0,
+      "Specificity": 100.0,
+      "Balanced_Accuracy": 100.0,
+      "Confusion_Matrix": {
+        "TP": 24,
+        "TN": 2,
+        "FP": 0,
+        "FN": 0
+      }
+    }
+  },
+  "error_analysis": {
+    "error_distribution": {
+      "mean": 0.02018519230769165,
+      "std": 0.04013677290697572,
+      "min": -0.025799999999999823,
+      "max": 0.17650000000000032,
+      "skewness": 2.2489034484858186,
+      "kurtosis": 6.48386106367089
+    },
+    "absolute_error_distribution": {
+      "mean": 0.029046730769231015,
+      "std": 0.03427375029821572,
+      "median": 0.023749999999999494,
+      "q25": 0.01367499999999977,
+      "q75": 0.031674999999999565
+    },
+    "worst_predictions": [
+      {
+        "index": 19,
+        "actual_gpa": 2.35,
+        "predicted_gpa": 2.1734999999999998,
+        "error": 0.17650000000000032,
+        "error_percentage": 7.510638297872354
+      },
+      {
+        "index": 23,
+        "actual_gpa": 3.97,
+        "predicted_gpa": 3.8788000000000005,
+        "error": 0.09119999999999973,
+        "error_percentage": 2.2972292191435697
+      },
+      {
+        "index": 15,
+        "actual_gpa": 3.12,
+        "predicted_gpa": 3.077900000000002,
+        "error": 0.04209999999999825,
+        "error_percentage": 1.3493589743589183
+      },
+      {
+        "index": 6,
+        "actual_gpa": 3.32,
+        "predicted_gpa": 3.283199999999995,
+        "error": 0.03680000000000483,
+        "error_percentage": 1.1084337349399045
+      },
+      {
+        "index": 14,
+        "actual_gpa": 3.08,
+        "predicted_gpa": 3.0462000000000047,
+        "error": 0.03379999999999539,
+        "error_percentage": 1.0974025974024477
+      }
+    ]
+  },
+  "feature_importance": {
+    "Year1_GPA": 0.3919369568379498,
+    "Year2_GPA": 0.3858246721811631,
+    "Year3_GPA": 0.1851433171736703,
+    "Credit_Hours_Avg": 0.03607571035541167,
+    "Gender_F": 0.0010193434518050077
+  }
+}

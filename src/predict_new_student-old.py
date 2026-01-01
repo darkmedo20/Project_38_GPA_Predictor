@@ -19,6 +19,27 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from model_pipeline import GPAModelPipeline
 from data_loader import GPADataLoader
 
+# class missing handler
+# Re-define MissingValueHandler class to match the pickled version
+class MissingValueHandler:
+    """Dummy class to allow unpickling."""
+    def __init__(self, strategy: str = 'contextual'):
+        self.strategy = strategy
+        self.imputation_values = {}
+        self.imputer = None
+    
+    def analyze_missing_patterns(self, df):
+        return {}
+    
+    def handle_missing_values(self, df):
+        return df
+    
+    # Add other methods as needed, or leave as pass
+
+# Now import the actual class
+from model_pipeline import GPAModelPipeline
+
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -593,6 +614,19 @@ if __name__ == "__main__":
     """
     Example usage of the New Student Predictor with CSV file input.
     """
+    '''
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Model is in models/ directory which is at the same level as src/
+    project_root = os.path.dirname(script_dir)  # Go up one level from src/
+    MODEL_PATH = os.path.join(project_root, "models", "best_gpa_model.pkl")
+    NEW_STUDENTS_CSV = os.path.join(project_root, "data", "new_students_for_prediction.csv")
+
+    # Debug print (you can remove this later)
+    print(f"Script directory: {script_dir}")
+    print(f"Project root: {project_root}")
+    print(f"Model path: {MODEL_PATH}")
+    print(f"Model exists: {os.path.exists(MODEL_PATH)}") '''
     
     # Configuration
     MODEL_PATH = "models/best_gpa_model.pkl"
